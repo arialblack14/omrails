@@ -9,6 +9,7 @@ $navbarBackground: white;
 @import 'bootstrap';
 
 body {
+	background: url('music.jpg');
 	padding-top: 60px;
 	font-size: 14px;
 	line-height: 20px;
@@ -17,8 +18,12 @@ body {
 @import 'bootstrap-responsive';
 
 .navbar-inner {
-	@include box-shadow(none !important);
+	@include box-shadow(!important);
 	border: 0;
+	background-color: #F5F5F5 	  ; /* place your solid color here */
+  	background: url('background.png');
+  	background-repeat: no-repeat;
+  	filter: none;
 }
 
 .footer {
