@@ -1,6 +1,11 @@
 class Pin < ActiveRecord::Base
   attr_accessible :description, :image
 
+  
+ 
+  validates_presence_of :image_remote_url, :if => :image_url_provided?, :message => 'is invalid or inaccessible'
+
+
   validates :description, presence: true
   validates :user_id, presence: true
   validates_attachment :image, presence: true,
@@ -9,4 +14,6 @@ class Pin < ActiveRecord::Base
 
   belongs_to :user
   has_attached_file :image, styles: { medium: "320x240>"}
+
+  
 end
